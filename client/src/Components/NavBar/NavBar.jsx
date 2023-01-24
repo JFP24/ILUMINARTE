@@ -8,6 +8,7 @@ export const NavBar = () => {
       <div className={styles.logo}>
       <Link to={"/Home"}>
         <img src={Logo} alt="Logo" />
+   
         </Link>
       </div>
 
@@ -25,7 +26,7 @@ export const NavBar = () => {
           </li>
           <li>
           <Link to={"/Contact"}>
-        <a className={styles.crear}>Contact</a>
+        <a className={styles.crear}>Contacto</a>
       </Link>
           </li>
         </ul>

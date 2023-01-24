@@ -1,10 +1,13 @@
 .header {
-  background-color: rgb(212, 211, 211);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 85px;
   padding: 50px 10%;
+  
+
+  
 }
 
 .logo {
@@ -12,8 +15,8 @@
 }
 
 .logo img {
-  height: 80px;
-  width: auto;
+  height: 95px;
+  width:auto;
   transition: all 0.3s;
   border-radius: 100%;
 }
@@ -26,7 +29,7 @@
 }
 
 .navLinks li {
-  font-weight: 700;
+
   display: inline-block;
   padding: 0 20px;
 }
@@ -37,30 +40,30 @@
 }
 
 .navLinks li a {
-  font-size: 700;
+
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .navLinks li a:hover {
-  color: rgb(240, 220, 185);
+  color: rgb(66, 65, 62);
   transition: all 0.3s;
 }
 
 .btn button {
   font-weight: 700;
-  color: #1b3039;
+  color: #383838;
   margin-left: 15px;
   padding: 9px 25px;
-  background: #1c9bf0;
+  background: #daa520;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .btn button:hover {
-  background-color:  rgb(240, 220, 185);
-  color: #1b3039;
+  background-color:  #383838;
+  color: #daa520;
   transform: scale(1.1);
 }
