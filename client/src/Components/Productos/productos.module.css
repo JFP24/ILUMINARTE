@@ -1,7 +1,8 @@
 .flex {
    
- padding:15px;
- margin:15px;
+    padding:20px;
+    padding-left: 350px;
+    margin:15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -11,8 +12,37 @@
 }
 
 .container{
- margin:10px;
-    padding:20px;
+    margin:10px;
+    padding:50px;
     border: solid 2px blue;
     border-radius: 10px;
+    cursor:pointer;
+
+}
+
+.image {
+    width:300px;
+    height: 300px;
+    position:relative;
+    bottom: 30px;
+    border-radius: 15px;
+}
+
+.filter {
+    position: absolute;
+    left: 30px;
+    margin: 10px;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-bottom: 860px;
+    border: solid 2px green;
+    border-radius: 10px;
+
+}
+
+.name {
+display: flex;
+justify-content: center;
+position: relative;
+bottom: 25px;
 }

@@ -21,11 +21,12 @@ export const Products = () => {
       <NavBar />
 
     <div className={styles.flex}>
+      <div className={styles.filter}>HOLA</div>
    {allProducts.map((d=> {
     return(
     <div className={styles.container}>
-    <img src={d.image} alt="" />
-    <h1> {d.name}</h1>
+    <img className={styles.image} src={d.image} alt="" />
+    <h1 className={styles.name}> {d.name}</h1>
    </div>
 
      )
