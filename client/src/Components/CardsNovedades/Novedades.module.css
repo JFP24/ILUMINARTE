@@ -1,11 +1,10 @@
 .flex {
- 
-    height: 500px;
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin:15px;
+    border: solid 5px blue;
 }
 
 .container {
