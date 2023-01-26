@@ -1,11 +1,13 @@
 
 import {
     GET_PRODUCTS,
+    GET_DETAILS
    
   } from "./types";
   
   const initialState = {
     allProducts: [],
+    detailsProducts: {}
    
   };
 
@@ -17,6 +19,12 @@ case GET_PRODUCTS :
         ...state,
         allProducts: action.payload
     }
+
+    case GET_DETAILS :
+        return {
+            ...state ,
+            detailsProducts : action.payload
+        }
     default:
         return state;
     }

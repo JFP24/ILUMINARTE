@@ -1,0 +1,50 @@
+.flex {
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: solid 5px rgb(0, 0, 0);
+padding: 138px;
+
+}
+
+.description {
+
+position: absolute;
+
+padding: 20px;
+width: 350px;
+height: 250px;
+right: 600px;
+bottom: 450px;
+}
+
+.container{
+    padding-left: 150px;
+    padding-right: 400px;
+  border : solid rgb(70, 70, 71) 5px;
+border-radius: 10px;
+}
+.name{
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+
+}
+
+
+.price {
+    position: relative;
+    left: 700px;
+    bottom: 150px;
+}
+.image{
+    border-radius: 10px;
+    border:solid 5px black;
+}
+
+.footer{
+    background-color: red;
+    padding: 50px;
+}

@@ -3,6 +3,7 @@ import { NavBar } from "../NavBar/NavBar";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../Redux/action";
 import styles from "./productos.module.css"
+import { Link } from "react-router-dom";
 
 
 export const Products = () => {
@@ -27,6 +28,10 @@ export const Products = () => {
     <div className={styles.container}>
     <img className={styles.image} src={d.image} alt="" />
     <h1 className={styles.name}> {d.name}</h1>
+    <p className={styles.price}>Precio : {d.price}</p>
+    <Link to={`/CardDetail/${d.id}`}>
+        <button className={styles.detalles}>Detalles</button>
+      </Link>
    </div>
 
      )
