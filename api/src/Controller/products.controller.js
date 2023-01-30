@@ -16,14 +16,14 @@ const nameProduct = async (req, res) => {
         stock: infoDb.stock,
       };
       //console.log(allData);
-      return res.status(202).send( data );
+      return res.status(202).json( data );
     }else{
       //si no existe devuelve mensaje de error
       return res.status(400).send({msg : "No existe este producto"})
     }
   } catch (error) {
     console.log(error);
-    return res.status(202).json({ msg: "error in nameProduct" });
+    return res.status(404).json({ msg: "error in nameProduct" });
   }
 };
 
