@@ -1,4 +1,4 @@
-const { Products } = require("../db");
+const { Products, Categories } = require("../db");
 
 const nameProduct = async (req, res) => {
   try {
@@ -31,7 +31,7 @@ const getProducts = async (req, res) => {
   try {
     //traemos todos los producsto de la base de datos
     const allProducts = await Products.findAll();
-   // console.log(allProducts);
+   console.log(allProducts);
    //enviamos un arreglo
     res.status(202).send( allProducts );
   } catch (error) {
@@ -44,9 +44,9 @@ const getProducts = async (req, res) => {
 const createProducst = async (req, res) => {
   try {
     //obtenemos informacion desde body
-    const { name, image, price, description } = req.body;
+    const { name, image, price, description, categories } = req.body;
     //validamos que no halla ningun espacio vacio
-    if ((!name, !image, !price, !description)) {
+    if ((!name, !image, !price, !description, !categories)) {
       res.status(400).send("Faltan espacios por llenar");
     }
     //creamos en la base de datos
@@ -56,7 +56,11 @@ const createProducst = async (req, res) => {
       description,
       name,
     });
-    console.log(createProducts);
+//traemos la que coincida
+const categoriesDB = await Categories.findAll({ where:{ name:categories } })
+await createProducts.addCategories(categoriesDB)
+
+console.log(categoriesDB)
     //devolvemos el producto creado
     res.status(202).json(createProducts);
   } catch (error) {
