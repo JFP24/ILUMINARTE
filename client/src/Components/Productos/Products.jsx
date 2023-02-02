@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../Redux/action";
 import styles from "./productos.module.css"
 import { Link } from "react-router-dom";
-
+import { Filters } from "../Filters/Filter";
 
 export const Products = () => {
   //Usamos hook para el despacho
@@ -22,7 +22,7 @@ export const Products = () => {
       <NavBar />
 
     <div className={styles.flex}>
-      <div className={styles.filter}>HOLA</div>
+      <div className={styles.filter}><Filters /></div>
    {allProducts.map((d=> {
     return(
     <div className={styles.container}>

@@ -1,13 +1,18 @@
 
 import {
     GET_PRODUCTS,
-    GET_DETAILS
+    GET_DETAILS,
+    GET_CATEGORIES,
+    FILTER_BY_CATEGORIES
    
   } from "./types";
   
   const initialState = {
     allProducts: [],
-    detailsProducts: {}
+    detailsProducts: {},
+    categories : [],
+    filterCategories : [],
+    products:{}
    
   };
 
@@ -17,7 +22,9 @@ const rootReducer = (state = initialState, action) => {
 case GET_PRODUCTS :
     return {
         ...state,
-        allProducts: action.payload
+        allProducts: action.payload,
+        filterCategories : action.payload,
+        products : action.payload
     }
 
     case GET_DETAILS :
@@ -25,6 +32,24 @@ case GET_PRODUCTS :
             ...state ,
             detailsProducts : action.payload
         }
+
+        case GET_CATEGORIES :{
+            return {
+                ...state ,
+                categories : action.payload
+            }
+        }
+        case FILTER_BY_CATEGORIES:
+      const allProduct = [...state.filterCategories];
+      console.log(allProduct, "este es")
+      const categorieFilter =
+        action.payload === "all"
+          ? state.products
+          : allProduct.filter((el) => el.categories.includes(action.payload));
+      return {
+        ...state,
+        allProducts: [...categorieFilter],
+      };
     default:
         return state;
     }

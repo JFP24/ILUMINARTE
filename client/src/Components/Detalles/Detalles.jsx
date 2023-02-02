@@ -35,6 +35,11 @@ console.log(details)
             <img  className={styles.image} src={details.image} alt="Imagen Producto" />
             <h2 className={styles.description}>{details.description}</h2>
             <h2 className={styles.price}>Precio: {details.price}</h2>
+            <div>
+                <Link to={`/Products`}>
+                <button>Volver</button>
+                </Link>
+            </div>
            </div>
             </div>
             <div className={styles.footer}>

@@ -30,10 +30,32 @@ const nameProduct = async (req, res) => {
 const getProducts = async (req, res) => {
   try {
     //traemos todos los producsto de la base de datos
-    const allProducts = await Products.findAll();
-   console.log(allProducts);
+    const allProducts = await Products.findAll({
+      include : Categories,
+      
+    });
+    
+    const info = allProducts.map((e)=>{
+return {
+  id : e.id,
+  Name : e.name,
+  Description: e.description,
+  Price : e.price,
+  Enable : e.enable ,
+  Stock : e.stock ,
+  Image : e.image ,
+  Categories : e.categories.map((d)=> { return {
+    id : d.id,
+    name : d.name 
+  }})
+
+
+}
+
+    })
+   console.log(info);
    //enviamos un arreglo
-    res.status(202).send( allProducts );
+    res.status(202).send( info );
   } catch (error) {
     console.log(error);
     res.status(404).json("Error from get Producst");
