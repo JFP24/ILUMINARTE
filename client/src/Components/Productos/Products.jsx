@@ -15,7 +15,7 @@ export const Products = () => {
     useEffect(() => {
         dispatch(getAllProducts());
       }, [dispatch]);
-
+console.log(allProducts)
 //retornamos jsx
   return (
     <div>
@@ -26,9 +26,9 @@ export const Products = () => {
    {allProducts.map((d=> {
     return(
     <div className={styles.container}>
-    <img className={styles.image} src={d.image} alt="" />
-    <h1 className={styles.name}> {d.name}</h1>
-    <p className={styles.price}>Precio : {d.price}</p>
+    <img className={styles.image} src={d.Image} alt="" />
+    <h1 className={styles.name}> {d.Name}</h1>
+    <p className={styles.price}>Precio : {d.Price}</p>
     <Link to={`/CardDetail/${d.id}`}>
         <button className={styles.detalles}>Detalles</button>
       </Link>

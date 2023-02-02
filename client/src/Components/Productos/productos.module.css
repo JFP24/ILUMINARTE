@@ -1,7 +1,7 @@
 .flex {
    
     padding:20px;
-    padding-left: 350px;
+    padding-left: 370px;
     margin:15px;
     display: flex;
     flex-direction: row;
@@ -12,8 +12,8 @@
 }
 
 .container{
-    margin:10px;
-    padding:50px;
+    margin:15px;
+    padding:40px;
     border: solid 2px blue;
     border-radius: 10px;
     cursor:pointer;
@@ -34,8 +34,8 @@
     position: absolute;
     left: 30px;
     margin: 10px;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding-left: 32px;
+    padding-right: 32px;
     padding-bottom: 860px;
     border: solid 2px green;
     border-radius: 10px;
