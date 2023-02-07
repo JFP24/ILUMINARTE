@@ -15,7 +15,7 @@ export const Filters = ()=> {
         dispatch(filterCategories(e.target.value));
    
       };
-
+//documentando un poco para un commit 
       const handleOrder = (e)=>{
         e.preventDefault()
         dispatch(orderProducts(e.target.value))
