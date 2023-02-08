@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories,filterCategories, orderProducts } from "../../Redux/action";
+import {styles} from "./Filter.module.css"
 
 export const Filters = ()=> {
   //usamos hook dispatch para el despacho
